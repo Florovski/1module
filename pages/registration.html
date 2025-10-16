@@ -1,0 +1,229 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация - Моя семья — мой космос</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .add-member-btn {
+            background: var(--accent-secondary);
+            color: white;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 6px;
+            cursor: pointer;
+            font-size: 0.9rem;
+            margin-top: 1rem;
+        }
+        .family-member {
+            border: 1px solid var(--border-color);
+            border-radius: 8px;
+            padding: 1.5rem;
+            margin-bottom: 1.5rem;
+            background-color: var(--bg-tertiary);
+        }
+        .remove-member {
+            background: var(--error-color);
+            color: white;
+            border: none;
+            padding: 0.25rem 0.5rem;
+            border-radius: 4px;
+            cursor: pointer;
+            font-size: 0.8rem;
+            float: right;
+        }
+        .member-template {
+            display: none;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Моя семья — мой космос</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="registration.html" class="nav-link">Регистрация</a></li>
+                        <li><a href="schedule.html" class="nav-link">Расписание</a></li>
+                        <li><a href="account.html" class="nav-link">Личный кабинет</a></li>
+                        <li><a href="competition.html" class="nav-link">Конкурсы</a></li>
+                    </ul>
+                </nav>
+                <a href="index-light.html" class="theme-toggle">Светлая тема</a>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Регистрация на сайте</h1>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form class="card">
+                        <h2 style="color: var(--accent-primary); margin-bottom: 2rem;">Основная информация</h2>
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email *</label>
+                            <input type="email" id="email" class="form-input" required 
+                                   placeholder="example@mail.ru">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Пароль *</label>
+                            <input type="password" id="password" class="form-input" required 
+                                   placeholder="Минимум 8 символов">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="confirm-password">Подтверждение пароля *</label>
+                            <input type="password" id="confirm-password" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="family-name">Название семьи *</label>
+                            <input type="text" id="family-name" class="form-input" required 
+                                   placeholder="Например: Семья Петровых">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="city">Город *</label>
+                            <input type="text" id="city" class="form-input" required 
+                                   placeholder="Ваш город">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="phone">Телефон</label>
+                            <input type="tel" id="phone" class="form-input" 
+                                   placeholder="+7 (999) 123-45-67">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="about">О семье</label>
+                            <textarea id="about" class="form-textarea" 
+                                      placeholder="Расскажите немного о вашей семье, увлечениях, традициях..."></textarea>
+                        </div>
+
+                        <h3 style="color: var(--accent-secondary); margin: 2rem 0 1rem;">Члены семьи</h3>
+                        <div id="family-members">
+                            <div class="family-member">
+                                <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Член семьи 1</h4>
+                                <div class="grid grid-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Имя *</label>
+                                        <input type="text" class="form-input" required placeholder="Имя">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Возраст *</label>
+                                        <input type="number" class="form-input" required min="1" max="120" placeholder="Возраст">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Роль в семье *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Выберите роль</option>
+                                        <option value="parent">Родитель</option>
+                                        <option value="child">Ребенок</option>
+                                        <option value="grandparent">Бабушка/Дедушка</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Увлечения</label>
+                                    <input type="text" class="form-input" placeholder="Хобби, интересы">
+                                </div>
+                            </div>
+                        </div>
+                        <template id="member-template" class="member-template">
+                            <div class="family-member">
+                                <button type="button" class="remove-member">Удалить</button>
+                                <h4 style="margin-bottom: 1rem; color: var(--text-primary);">Член семьи</h4>
+                                <div class="grid grid-2">
+                                    <div class="form-group">
+                                        <label class="form-label">Имя *</label>
+                                        <input type="text" class="form-input" required placeholder="Имя">
+                                    </div>
+                                    <div class="form-group">
+                                        <label class="form-label">Возраст *</label>
+                                        <input type="number" class="form-input" required min="1" max="120" placeholder="Возраст">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Роль в семье *</label>
+                                    <select class="form-select" required>
+                                        <option value="">Выберите роль</option>
+                                        <option value="parent">Родитель</option>
+                                        <option value="child">Ребенок</option>
+                                        <option value="grandparent">Бабушка/Дедушка</option>
+                                        <option value="other">Другое</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label">Увлечения</label>
+                                    <input type="text" class="form-input" placeholder="Хобби, интересы">
+                                </div>
+                            </div>
+                        </template>
+                        <button type="button" class="add-member-btn">+ Добавить члена семьи</button>
+                        <div class="form-group" style="margin-top: 2rem;">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox" required>
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">
+                                    Согласие на обработку персональных данных *
+                                </span>
+                            </label>
+                        </div>
+                        <div class="form-group">
+                            <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                <input type="checkbox">
+                                <span style="font-size: 0.9rem; color: var(--text-secondary);">
+                                    Получать уведомления о новых конкурсах
+                                </span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 1rem;">
+                            Зарегистрироваться
+                        </button>
+
+                        <div class="message success">
+                            <strong>Успешно!</strong> Регистрация прошла успешно. Проверьте email для подтверждения.
+                        </div>
+                        <div class="message error">
+                            <strong>Ошибка!</strong> Пожалуйста, проверьте введенные данные и попробуйте еще раз.
+                        </div>
+                        <div class="message warning">
+                            <strong>Внимание!</strong> Некоторые поля заполнены некорректно.
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (4842) 23-45-67</p>
+                    <p>Email: family@cosmos.ru</p>
+                    <p>Адрес: г. Калуга, ул. Семейная, 1</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <a href="../index.html">Главная</a>
+                    <a href="registration.html">Регистрация</a>
+                    <a href="schedule.html">Расписание</a>
+                    <a href="account.html">Личный кабинет</a>
+                    <a href="competition.html">Конкурсы</a>
+                    <a href="404.html">404</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Темы</h3>
+                    <a href="../index.html">Темная тема</a>
+                    <a href="index-light.html">Светлая тема</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Моя семья — мой космос. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

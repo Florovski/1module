@@ -1,0 +1,320 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Расписание - Моя семья — мой космос</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <style>
+        .schedule-container {
+            overflow-x: auto;
+            margin: 2rem 0;
+        }
+        .schedule-table {
+            min-width: 800px;
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 1px;
+            background-color: var(--border-color);
+        }
+        .schedule-table th,
+        .schedule-table td {
+            padding: 1rem;
+            text-align: center;
+            background-color: var(--card-bg);
+            border: none;
+            width: 80px;
+            height: 80px;
+            vertical-align: middle;
+        }
+        .schedule-table th {
+            background-color: var(--bg-tertiary);
+            font-weight: 600;
+            position: sticky;
+            top: 0;
+            z-index: 10;
+        }
+        .schedule-table th:first-child {
+            position: sticky;
+            left: 0;
+            z-index: 11;
+            width: 200px;
+            text-align: left;
+        }
+        .schedule-table td:first-child {
+            position: sticky;
+            left: 0;
+            background-color: var(--bg-tertiary);
+            font-weight: 600;
+            text-align: left;
+            width: 200px;
+        }
+        .slot-available {
+            background-color: var(--card-bg);
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        .slot-available:hover {
+            background-color: var(--hover-color);
+        }
+        .slot-full {
+            background-color: var(--text-muted);
+            color: var(--bg-primary);
+            cursor: not-allowed;
+        }
+        .legend {
+            display: flex;
+            gap: 2rem;
+            justify-content: center;
+            margin-bottom: 2rem;
+            flex-wrap: wrap;
+        }
+        .legend-item {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+        }
+        .legend-color {
+            width: 20px;
+            height: 20px;
+            border-radius: 4px;
+        }
+        @media (max-width: 768px) {
+            .schedule-table th,
+            .schedule-table td {
+                padding: 0.5rem;
+                width: 60px;
+                height: 60px;
+                font-size: 0.875rem;
+            }
+            .schedule-table th:first-child,
+            .schedule-table td:first-child {
+                width: 150px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="../index.html" class="logo">Моя семья — мой космос</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="registration.html" class="nav-link">Регистрация</a></li>
+                        <li><a href="schedule.html" class="nav-link">Расписание</a></li>
+                        <li><a href="account.html" class="nav-link">Личный кабинет</a></li>
+                        <li><a href="competition.html" class="nav-link">Конкурсы</a></li>
+                    </ul>
+                </nav>
+                <a href="index-light.html" class="theme-toggle">Светлая тема</a>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="section">
+            <div class="container">
+                <h1 class="section-title">Расписание конкурсов</h1>
+                <p class="section-subtitle">
+                    Выберите удобное время для участия в семейных конкурсах
+                </p>
+                <div class="legend">
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--card-bg);"></div>
+                        <span>Свободное место</span>
+                    </div>
+                    <div class="legend-item">
+                        <div class="legend-color" style="background-color: var(--text-muted);"></div>
+                        <span>Места заняты</span>
+                    </div>
+                </div>
+                <div class="schedule-container">
+                    <table class="schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Конкурс / Время</th>
+                                <th>09:00</th>
+                                <th>10:00</th>
+                                <th>11:00</th>
+                                <th>12:00</th>
+                                <th>13:00</th>
+                                <th>14:00</th>
+                                <th>15:00</th>
+                                <th>16:00</th>
+                                <th>17:00</th>
+                                <th>18:00</th>
+                                <th>19:00</th>
+                                <th>20:00</th>
+                                <th>21:00</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>Семейный фотоконкурс</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                            </tr>
+                            <tr>
+                                <td>Кулинарный поединок</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                            </tr>
+                            <tr>
+                                <td>Творческая мастерская</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                            </tr>
+                            <tr>
+                                <td>Музыкальный семейный вечер</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                            </tr>
+                            <tr>
+                                <td>Семейные спортивные игры</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-available">Свободно</td>
+                                <td class="slot-full">Занято</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div style="max-width: 600px; margin: 3rem auto;">
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1.5rem;">
+                            Быстрая запись на конкурс
+                        </h3>
+                        <form>
+                            <div class="form-group">
+                                <label class="form-label" for="quick-competition">Выберите конкурс</label>
+                                <select id="quick-competition" class="form-select" required>
+                                    <option value="">Выберите конкурс</option>
+                                    <option value="photo">Семейный фотоконкурс</option>
+                                    <option value="cooking">Кулинарный поединок</option>
+                                    <option value="art">Творческая мастерская</option>
+                                    <option value="music">Музыкальный семейный вечер</option>
+                                    <option value="sport">Семейные спортивные игры</option>
+                                </select>
+                            </div>
+                            <div class="grid grid-2">
+                                <div class="form-group">
+                                    <label class="form-label" for="quick-date">Дата</label>
+                                    <input type="date" id="quick-date" class="form-input" required>
+                                </div>
+                                <div class="form-group">
+                                    <label class="form-label" for="quick-time">Время</label>
+                                    <select id="quick-time" class="form-select" required>
+                                        <option value="">Выберите время</option>
+                                        <option value="09:00">09:00</option>
+                                        <option value="10:00">10:00</option>
+                                        <option value="11:00">11:00</option>
+                                        <option value="12:00">12:00</option>
+                                        <option value="13:00">13:00</option>
+                                        <option value="14:00">14:00</option>
+                                        <option value="15:00">15:00</option>
+                                        <option value="16:00">16:00</option>
+                                        <option value="17:00">17:00</option>
+                                        <option value="18:00">18:00</option>
+                                        <option value="19:00">19:00</option>
+                                        <option value="20:00">20:00</option>
+                                        <option value="21:00">21:00</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Записаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (4842) 23-45-67</p>
+                    <p>Email: family@cosmos.ru</p>
+                    <p>Адрес: г. Калуга, ул. Семейная, 1</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <a href="../index.html">Главная</a>
+                    <a href="registration.html">Регистрация</a>
+                    <a href="schedule.html">Расписание</a>
+                    <a href="account.html">Личный кабинет</a>
+                    <a href="competition.html">Конкурсы</a>
+                    <a href="404.html">404</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Темы</h3>
+                    <a href="../index.html">Темная тема</a>
+                    <a href="index-light.html">Светлая тема</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Моя семья — мой космос. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Моя семья — мой космос (светлая тема)</title>
+    <link rel="stylesheet" href="../styles/main.css">
+    <link rel="stylesheet" href="../styles/light.css">
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="header-content">
+                <a href="index-light.html" class="logo">Моя семья — мой космос</a>
+                <nav class="nav">
+                    <ul class="nav-list">
+                        <li><a href="../index.html" class="nav-link">Главная</a></li>
+                        <li><a href="registration.html" class="nav-link">Регистрация</a></li>
+                        <li><a href="schedule.html" class="nav-link">Расписание</a></li>
+                        <li><a href="account.html" class="nav-link">Личный кабинет</a></li>
+                        <li><a href="competition.html" class="nav-link">Конкурсы</a></li>
+                    </ul>
+                </nav>
+                <a href="../index.html" class="theme-toggle">Темная тема</a>
+                <button class="mobile-menu-toggle">☰</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="section" style="background: linear-gradient(135deg, var(--bg-secondary) 0%, var(--bg-tertiary) 100%);">
+            <div class="container">
+                <div class="hero-content" style="text-align: center; max-width: 800px; margin: 0 auto;">
+                    <h1 class="section-title" style="font-size: 3.5rem; margin-bottom: 1.5rem;">
+                        Добро пожаловать в мир семейного творчества
+                    </h1>
+                    <p class="section-subtitle" style="font-size: 1.3rem; margin-bottom: 2.5rem;">
+                        Откройте для себя уникальные семейные конкурсы и мероприятия,
+                        которые объединят всех членов вашей семьи
+                    </p>
+                    <div style="display: flex; gap: 1rem; justify-content: center; flex-wrap: wrap;">
+                        <a href="registration.html" class="btn btn-primary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                            Присоединиться
+                        </a>
+                        <a href="competition.html" class="btn btn-secondary" style="font-size: 1.1rem; padding: 1rem 2rem;">
+                            Смотреть конкурсы
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Login Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Вход в личный кабинет</h2>
+                <div style="max-width: 400px; margin: 0 auto;">
+                    <form class="card">
+                        <div class="form-group">
+                            <label class="form-label" for="email">Email</label>
+                            <input type="email" id="email" class="form-input" required>
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="password">Пароль</label>
+                            <input type="password" id="password" class="form-input" required>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Войти</button>
+                        <p style="text-align: center; margin-top: 1rem;">
+                            <a href="#" style="color: var(--accent-primary);">Забыли пароль?</a>
+                        </p>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- About Section -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">О нас</h2>
+                <div class="grid grid-2">
+                    <div>
+                        <h3 style="font-size: 1.5rem; margin-bottom: 1rem; color: var(--text-primary);">
+                            Наша миссия
+                        </h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1.5rem;">
+                            Мы создаем уникальные семейные мероприятия, которые объединяют поколения
+                            и помогают семьям стать ближе друг к другу. Каждая семья — это целая
+                            вселенная со своими традициями и особенностями.
+                        </p>
+                        <p style="color: var(--text-secondary);">
+                            С 2020 года мы проводим семейные конкурсы, которые помогают раскрыть
+                            творческий потенциал каждого члена семьи.
+                        </p>
+                    </div>
+                    <div class="card">
+                        <h3 style="font-size: 1.3rem; margin-bottom: 1rem; color: var(--accent-primary);">
+                            Статистика
+                        </h3>
+                        <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 1rem;">
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent-primary);">500+</div>
+                                <div style="color: var(--text-secondary);">Семей участников</div>
+                            </div>
+                            <div style="text-align: center;">
+                                <div style="font-size: 2rem; font-weight: 700; color: var(--accent-secondary);">50+</div>
+                                <div style="color: var(--text-secondary);">Проведено конкурсов</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Video Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Приветствие от организаторов</h2>
+                <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+                    <div class="card" style="background-color: var(--bg-tertiary); min-height: 400px; display: flex; align-items: center; justify-content: center;">
+                        <div>
+                            <div style="font-size: 4rem; margin-bottom: 1rem;">🎬</div>
+                            <p style="color: var(--text-secondary);">
+                                Видео-приветствие<br>
+                                <small>(media/video/hello.mp4)</small>
+                            </p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Competitions Section -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Популярные конкурсы</h2>
+                <div class="grid grid-3">
+                    <div class="card">
+                        <h3 style="color: var(--accent-primary); margin-bottom: 1rem;">Семейный фотоконкурс</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                            Поделитесь самыми яркими семейными моментами через объектив камеры
+                        </p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">4.8</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Участников: 124</p>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%;">Подробнее</a>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--accent-secondary); margin-bottom: 1rem;">Кулинарный поединок</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                            Семейные рецепты и традиции в творческом исполнении
+                        </p>
+                        <div class="rating">
+                            <span class="stars">★★★★☆</span>
+                            <span class="rating-value">4.5</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Участников: 89</p>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%;">Подробнее</a>
+                    </div>
+                    <div class="card">
+                        <h3 style="color: var(--accent-tertiary); margin-bottom: 1rem;">Творческая мастерская</h3>
+                        <p style="color: var(--text-secondary); margin-bottom: 1rem;">
+                            Создайте произведение искусства всей семьей
+                        </p>
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">4.9</span>
+                        </div>
+                        <p style="color: var(--text-muted); margin-bottom: 1.5rem;">Участников: 156</p>
+                        <a href="competition.html" class="btn btn-primary" style="width: 100%;">Подробнее</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Search Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Поиск конкурсов</h2>
+                <div style="max-width: 600px; margin: 0 auto;">
+                    <form class="card">
+                        <div class="form-group">
+                            <label class="form-label" for="search">Поиск по названию или описанию</label>
+                            <input type="text" id="search" class="form-input"
+                                   placeholder="Введите ключевые слова...">
+                        </div>
+                        <div class="form-group">
+                            <label class="form-label" for="category">Категория</label>
+                            <select id="category" class="form-select">
+                                <option value="">Все категории</option>
+                                <option value="photo">Фотоконкурсы</option>
+                                <option value="cooking">Кулинария</option>
+                                <option value="art">Творчество</option>
+                                <option value="music">Музыка</option>
+                                <option value="sport">Спорт</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary" style="width: 100%;">Найти</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Reviews Section -->
+        <section class="section" style="background-color: var(--bg-secondary);">
+            <div class="container">
+                <h2 class="section-title">Отзывы участников</h2>
+                <div class="grid grid-2">
+                    <div class="card">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">5.0</span>
+                        </div>
+                        <p style="color: var(--text-secondary); margin: 1rem 0;">
+                            "Участие в фотоконкурсе стало настоящим открытием для нашей семьи!
+                            Мы узнали друг друга с новой стороны."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 40px; height: 40px; background: var(--accent-primary);
+                                       border-radius: 50%; display: flex; align-items: center;
+                                       justify-content: center; color: white; font-weight: 600;">
+                                Е
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-primary);">Елена Петрова</div>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">15 июня 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card">
+                        <div class="rating">
+                            <span class="stars">★★★★★</span>
+                            <span class="rating-value">5.0</span>
+                        </div>
+                        <p style="color: var(--text-secondary); margin: 1rem 0;">
+                            "Кулинарный поединок превзошел все ожидания! Дети с радостью помогали готовить."
+                        </p>
+                        <div style="display: flex; align-items: center; gap: 0.75rem;">
+                            <div style="width: 40px; height: 40px; background: var(--accent-secondary);
+                                       border-radius: 50%; display: flex; align-items: center;
+                                       justify-content: center; color: white; font-weight: 600;">
+                                М
+                            </div>
+                            <div>
+                                <div style="font-weight: 600; color: var(--text-primary);">Михаил Сидоров</div>
+                                <div style="font-size: 0.875rem; color: var(--text-muted);">22 мая 2024</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Newsletter Section -->
+        <section class="section">
+            <div class="container">
+                <h2 class="section-title">Подписка на новости</h2>
+                <div style="max-width: 500px; margin: 0 auto;">
+                    <div class="card">
+                        <p style="text-align: center; color: var(--text-secondary); margin-bottom: 2rem;">
+                            Будьте в курсе всех семейных мероприятий и новых конкурсов
+                        </p>
+                        <form>
+                            <div class="form-group">
+                                <input type="email" class="form-input" placeholder="Ваш email" required>
+                            </div>
+                            <div class="form-group">
+                                <label style="display: flex; align-items: center; gap: 0.5rem; cursor: pointer;">
+                                    <input type="checkbox" required>
+                                    <span style="font-size: 0.875rem; color: var(--text-secondary);">
+                                        Согласие на обработку персональных данных
+                                    </span>
+                                </label>
+                            </div>
+                            <button type="submit" class="btn btn-primary" style="width: 100%;">
+                                Подписаться
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Контакты</h3>
+                    <p>Телефон: +7 (4842) 23-45-67</p>
+                    <p>Email: family@cosmos.ru</p>
+                    <p>Адрес: г. Калуга, ул. Семейная, 1</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Навигация</h3>
+                    <a href="../index.html">Главная</a>
+                    <a href="registration.html">Регистрация</a>
+                    <a href="schedule.html">Расписание</a>
+                    <a href="account.html">Личный кабинет</a>
+                    <a href="competition.html">Конкурсы</a>
+                    <a href="404.html">404</a>
+                </div>
+                <div class="footer-section">
+                    <h3>Темы</h3>
+                    <a href="../index.html">Темная тема</a>
+                    <a href="index-light.html">Светлая тема</a>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Моя семья — мой космос. Все права защищены.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
